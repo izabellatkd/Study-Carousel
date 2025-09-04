@@ -3,36 +3,40 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>White Seamless Carousel</title>
+  <title>1280x560 Carousel</title>
   <style>
     html, body {
-      height: 100%;
       margin: 0;
-      background: #fff; /* White background */
+      padding: 0;
+      background: #fff;
     }
     .wrap {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #fff;
+      width: 100vw;
+      max-width: 100%;
+      margin: 0;
       padding: 0;
+      background: #fff;
+      display: flex;
+      justify-content: center;
     }
     .carousel {
       position: relative;
-      overflow: hidden;
       width: 100%;
-      max-width: 1000px; /* Keeps it responsive in Notion */
+      aspect-ratio: 16 / 9; /* 🔒 fixed ratio */
+      overflow: hidden;
       background: #fff;
     }
     .carousel-track {
       display: flex;
       transition: transform 0.5s ease;
       will-change: transform;
+      height: 100%;
     }
     .carousel img {
       width: 100%;
-      height: auto;
+      height: 100%;
       flex-shrink: 0;
+      object-fit: cover; /* fills space (crop if needed) */
       display: block;
       background: #fff;
     }
@@ -50,7 +54,7 @@
       transition: opacity 0.3s;
     }
     .carousel:hover .btn {
-      opacity: 1; /* Show arrows only on hover */
+      opacity: 1;
     }
     .btn.prev { left: 12px; }
     .btn.next { right: 12px; }
@@ -60,14 +64,15 @@
   <div class="wrap">
     <div class="carousel" role="region" aria-label="Image carousel">
       <div class="carousel-track" id="track">
-        <img src="https://picsum.photos/id/1015/1200/600" alt="Image 1">
-        <img src="https://picsum.photos/id/1016/1200/600" alt="Image 2">
-        <img src="https://picsum.photos/id/1018/1200/600" alt="Image 3">
-        <img src="https://picsum.photos/id/1020/1200/600" alt="Image 4">
-        <img src="https://picsum.photos/id/1024/1200/600" alt="Image 5">
-        <img src="https://picsum.photos/id/1024/1200/600" alt="Image 6">
-        <img src="https://picsum.photos/id/1024/1200/600" alt="Image 7">
-        <img src="https://picsum.photos/id/1024/1200/600" alt="Image 8">
+        <img src="https://github.com/izabellatkd/Coffee-Carousel/blob/main/coffeecr.gif?raw=true" alt="coffee study">
+        <img src="https://github.com/izabellatkd/Coffee-Carousel/blob/main/coffee-study%20.gif?raw=true" alt="coffee study 2">
+        <img src="https://github.com/izabellatkd/Coffee-Carousel/blob/main/gamecr.gif?raw=true" alt="game room">
+        <img src="https://github.com/izabellatkd/Coffee-Carousel/blob/main/marketcr.gif?raw=true" alt="market">
+        <img src="https://github.com/izabellatkd/Coffee-Carousel/blob/main/bus.gif?raw=true" alt="bus stop">
+        <img src="https://github.com/izabellatkd/Coffee-Carousel/blob/main/alleycr.gif?raw=true" alt="alley">
+        <img src="https://github.com/izabellatkd/Coffee-Carousel/blob/main/desk.gif?raw=true" alt="desk">
+        <img src="https://github.com/izabellatkd/Coffee-Carousel/blob/main/wintercr.gif?raw=true" alt="winter">
+        <img src="https://github.com/izabellatkd/Coffee-Carousel/blob/main/snow-train.gif?raw=true" alt="snowy train">
       </div>
       <button class="btn prev" id="prev" aria-label="Previous slide">&#10094;</button>
       <button class="btn next" id="next" aria-label="Next slide">&#10095;</button>
